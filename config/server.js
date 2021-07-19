@@ -18,13 +18,13 @@ module.exports = {
 	ajaxBaseUrl: `http://localhost:3001/ajax`,
 
 	// Access-Control-Allow-Origin
-	storeBaseUrl: `http://localhost:3000`,
+	storeBaseUrl: `http://localhost:${process.env.PORT}`,
 
 	// used by API
 	adminLoginUrl: '/admin/login',
 
 	apiListenPort: 3001,
-	storeListenPort: 3000,
+	storeListenPort: process.env.PORT} || 3000,
 
 	// used by API
 	mongodbServerUrl: dbUrl,
