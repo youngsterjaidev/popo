@@ -12,10 +12,10 @@ const dbUrl =
 
 module.exports = {
 	// used by Store (server side)
-	apiBaseUrl: `http://localhost:3001/api/v1`,
+	apiBaseUrl: `http://localhost:${process.env.PORT}/api/v1`,
 
 	// used by Store (server and client side)
-	ajaxBaseUrl: `http://localhost:3001/ajax`,
+	ajaxBaseUrl: `http://localhost:${process.env.PORT}/ajax`,
 
 	// Access-Control-Allow-Origin
 	storeBaseUrl: `http://localhost:${process.env.PORT}`,
@@ -23,7 +23,7 @@ module.exports = {
 	// used by API
 	adminLoginUrl: '/admin/login',
 
-	apiListenPort: 3001,
+	apiListenPort: process.env.PORT || 3001,
 	storeListenPort: process.env.PORT || 3000,
 
 	// used by API
